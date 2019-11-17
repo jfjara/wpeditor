@@ -1,0 +1,795 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>386</width>
+    <height>756</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>WayPoint Editor by Novadrone</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="recursos.qrc">
+    <normaloff>:/iconos/images/iconowp_8Vn_icon.ico</normaloff>:/iconos/images/iconowp_8Vn_icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>350</width>
+          <height>1500</height>
+         </size>
+        </property>
+        <property name="focusPolicy">
+         <enum>Qt::NoFocus</enum>
+        </property>
+        <property name="layoutDirection">
+         <enum>Qt::LeftToRight</enum>
+        </property>
+        <property name="tabPosition">
+         <enum>QTabWidget::West</enum>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <property name="tabBarAutoHide">
+         <bool>false</bool>
+        </property>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>Plan de vuelo</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QListView" name="planVueloListView"/>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Misión</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QLabel" name="nombreMisionLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Nombre misión</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="nombreProyectoEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="localizacionLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Localización</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="localizacionEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="descripcionMisionLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Descripción</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPlainTextEdit" name="descripcionEdit"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="coordenadasLabel">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Sistema de coordenadas</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="coordenadasComboBox"/>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="utmGroupBox">
+            <property name="font">
+             <font>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="title">
+             <string>Configuración UTM</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_7">
+             <item>
+              <widget class="QLabel" name="zonaLabel">
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Zona</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="letraZonacomboBox"/>
+             </item>
+             <item>
+              <widget class="QComboBox" name="numeroZonacomboBox"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_3">
+         <attribute name="title">
+          <string>Configuración vuelo</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>304</width>
+               <height>657</height>
+              </rect>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_6">
+              <item>
+               <widget class="QLabel" name="maxAlturaVisorLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Altura máxima visor alturas</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <item>
+                 <widget class="QLineEdit" name="maxAlturaVisorEdit">
+                  <property name="text">
+                   <string>150</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="metros1Label">
+                  <property name="text">
+                   <string>metros</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="maxAlturaVueloLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Altura máxima de vuelo</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <item>
+                 <widget class="QLineEdit" name="maxAlturaVueloEdit">
+                  <property name="text">
+                   <string>120</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="metros2Label">
+                  <property name="text">
+                   <string>metros</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QLabel" name="alturaWaypointsLabel">
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Altura waypoints</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QLineEdit" name="alturaWaypointsText">
+                  <property name="text">
+                   <string>70</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="metros3Label">
+                  <property name="text">
+                   <string>metros</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="avionLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Avión</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="comboAviones"/>
+              </item>
+              <item>
+               <widget class="QLabel" name="maxInclinacionAscLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Máxima inclinación ascendente</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <item>
+                 <widget class="QLineEdit" name="maxAnguloInclinacionEdit">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="text">
+                   <string>50</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="grados1Label">
+                  <property name="text">
+                   <string>grados</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="maxDeclinacionLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Máxima inclinación descendente</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLineEdit" name="maxAnguloDeclinacionEdit">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                  <property name="text">
+                   <string>50</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="grados2Label">
+                  <property name="text">
+                   <string>grados</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="baseLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Base aterrizaje</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QLineEdit" name="baseLineEdit">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="metros4Label">
+                  <property name="text">
+                   <string>metros</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="recorridoLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Recorrido aterrizaje</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QLineEdit" name="recorridoLineEdit">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="metros5Label">
+                  <property name="text">
+                   <string>metros</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QLabel" name="tiempoVueloLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Tiempo de vuelo estimado</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLineEdit" name="tiempoVueloTextEdit">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="velocidadLabel">
+                <property name="font">
+                 <font>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Velocidad de crucero</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <item>
+                 <widget class="QLineEdit" name="velocidadTextEdit">
+                  <property name="enabled">
+                   <bool>false</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>m/s</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <spacer name="verticalSpacer">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>386</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuArchivo">
+    <property name="title">
+     <string>Archivo</string>
+    </property>
+    <addaction name="actionNueva_mision"/>
+    <addaction name="actionAbrir_proyecto"/>
+    <addaction name="actionGuardar_proyecto"/>
+    <addaction name="actionGuardar_mision_como"/>
+    <addaction name="separator"/>
+    <addaction name="actionImportar_fly_a_misi_n"/>
+    <addaction name="actionExportar_a_fichero_FLY"/>
+    <addaction name="separator"/>
+    <addaction name="actionSalir"/>
+   </widget>
+   <widget class="QMenu" name="menuWaypoints">
+    <property name="title">
+     <string>Waypoints</string>
+    </property>
+    <addaction name="actionA_adir_waypoints"/>
+    <addaction name="actionCrear_waypoint_anterior_a_marcado"/>
+    <addaction name="actionBorrar_waypoint_seleccionado"/>
+    <addaction name="actionBorrar_todos_los_waypoints"/>
+   </widget>
+   <widget class="QMenu" name="menuGrids">
+    <property name="title">
+     <string>Grids</string>
+    </property>
+    <addaction name="actionCrear_grids_Ctrl_p"/>
+   </widget>
+   <widget class="QMenu" name="menuAyuda">
+    <property name="title">
+     <string>Ayuda</string>
+    </property>
+    <addaction name="actionAcerca_de"/>
+   </widget>
+   <widget class="QMenu" name="menuConfiguraci_n">
+    <property name="title">
+     <string>Configuración</string>
+    </property>
+    <addaction name="actionAviones"/>
+    <addaction name="actionC_maras"/>
+    <addaction name="actionOpciones"/>
+    <addaction name="actionOpciones_visor"/>
+   </widget>
+   <widget class="QMenu" name="menuMapas">
+    <property name="title">
+     <string>Mapas</string>
+    </property>
+    <addaction name="actionA_dir_mapa"/>
+   </widget>
+   <widget class="QMenu" name="menuMos_ico">
+    <property name="title">
+     <string>Mosáico</string>
+    </property>
+    <addaction name="actionCrear_mos_ico"/>
+    <addaction name="actionVer_mosaico"/>
+    <addaction name="actionVentana_de_im_genes"/>
+   </widget>
+   <addaction name="menuArchivo"/>
+   <addaction name="menuWaypoints"/>
+   <addaction name="menuGrids"/>
+   <addaction name="menuMapas"/>
+   <addaction name="menuConfiguraci_n"/>
+   <addaction name="menuAyuda"/>
+   <addaction name="menuMos_ico"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionAbrir_proyecto">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/open16.png</normaloff>:/iconos/images/open16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Abrir misión (Ctrl+o)</string>
+   </property>
+  </action>
+  <action name="actionGuardar_proyecto">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/save16.png</normaloff>:/iconos/images/save16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar misión (Ctrl+s)</string>
+   </property>
+  </action>
+  <action name="actionExportar_a_fichero_FLY">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/export16.png</normaloff>:/iconos/images/export16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exportar a fichero .fly (Ctrl+e)</string>
+   </property>
+  </action>
+  <action name="actionSalir">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/exit16.png</normaloff>:/iconos/images/exit16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Salir (Ctrl + q)</string>
+   </property>
+  </action>
+  <action name="actionA_adir_waypoints">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/waypoint16.png</normaloff>:/iconos/images/waypoint16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Añadir waypoints (Ctrl+w)</string>
+   </property>
+  </action>
+  <action name="actionCrear_waypoint_anterior_a_marcado">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/waypointbefore16.png</normaloff>:/iconos/images/waypointbefore16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Crear waypoint anterior a marcado (Ctrl+b)</string>
+   </property>
+  </action>
+  <action name="actionCrear_grids_Ctrl_p">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/grid16.png</normaloff>:/iconos/images/grid16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Crear grids (Ctrl+p)</string>
+   </property>
+  </action>
+  <action name="actionAcerca_de">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/about16.png</normaloff>:/iconos/images/about16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Acerca de...</string>
+   </property>
+  </action>
+  <action name="actionNueva_mision">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/new16.png</normaloff>:/iconos/images/new16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Nueva misión (Ctrl + n)</string>
+   </property>
+  </action>
+  <action name="actionGuardar_mision_como">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/saveas16.png</normaloff>:/iconos/images/saveas16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar misión como...</string>
+   </property>
+  </action>
+  <action name="actionBorrar_waypoint_seleccionado">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/rubber16.png</normaloff>:/iconos/images/rubber16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Borrar waypoint seleccionado</string>
+   </property>
+  </action>
+  <action name="actionBorrar_todos_los_waypoints">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/clean16.png</normaloff>:/iconos/images/clean16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Borrar todos los waypoints</string>
+   </property>
+  </action>
+  <action name="actionAviones">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/plane16.png</normaloff>:/iconos/images/plane16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Aviones</string>
+   </property>
+  </action>
+  <action name="actionC_maras">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/camera16.png</normaloff>:/iconos/images/camera16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cámaras</string>
+   </property>
+  </action>
+  <action name="actionOpciones">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/settings16.png</normaloff>:/iconos/images/settings16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Opciones...</string>
+   </property>
+  </action>
+  <action name="actionOpciones_visor">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/configviewer16.png</normaloff>:/iconos/images/configviewer16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Opciones visor</string>
+   </property>
+  </action>
+  <action name="actionImportar_fly_a_misi_n">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/import16.png</normaloff>:/iconos/images/import16.png</iconset>
+   </property>
+   <property name="text">
+    <string>Importar .fly a misión</string>
+   </property>
+  </action>
+  <action name="actionA_dir_mapa">
+   <property name="icon">
+    <iconset resource="recursos.qrc">
+     <normaloff>:/iconos/images/maps.png</normaloff>:/iconos/images/maps.png</iconset>
+   </property>
+   <property name="text">
+    <string>Añdir mapa</string>
+   </property>
+  </action>
+  <action name="actionCrear_mos_ico">
+   <property name="text">
+    <string>Crear mosáico</string>
+   </property>
+  </action>
+  <action name="actionVer_mosaico">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Ver mosaico</string>
+   </property>
+  </action>
+  <action name="actionVentana_de_im_genes">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Ventana de imágenes</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="recursos.qrc"/>
+ </resources>
+ <connections/>
+</ui>

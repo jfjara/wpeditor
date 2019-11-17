@@ -1,0 +1,38 @@
+[Map Data]
+xsize=[xsize]
+ysize=[ysize]
+version=1
+north=[north]
+south=[south]
+east=[east]
+west=[west]
+useTiePoints=1
+comment=
+[Overlay]
+Selected=
+[Tie Point 1]
+latitude=[north]
+longitude=[west]
+x=0
+y=0
+[Tie Point 2]
+latitude=[south]
+longitude=[east]
+x=[xsize]
+y=[ysize]
+[DEM]
+count=0
+[Reprojection]
+Ok=0
+GeoTifOk=0
+UseReprojectedMap=1
+north=[north]
+south=[south]
+east=[east]
+west=[west]
+[Projection]
+Simple=1
+Proj=latlong
+Datum=WGS84
+Ellipsoid=WGS84
+Zone=
